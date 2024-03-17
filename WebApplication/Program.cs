@@ -17,6 +17,7 @@ public class Program
         app.UseSwaggerUI(c =>
         {
             c.RoutePrefix = "";
+            c.SwaggerEndpoint("../swagger/v1/swagger.json", "My API V1");
             c.EnableTryItOutByDefault();
         });
 
