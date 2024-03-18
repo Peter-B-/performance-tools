@@ -23,10 +23,15 @@
    - > "We value maintainable code over premature optimization."
 
  - `dotnet counters`
+   - auch möglich in Docker
 
- - `dotnet trace`
+ - `dotnet dump`
+ 
+ - `dotTrace`
+   - sync over async Problem 
 
-
+ - `ProcMon`
+   - Dateizugriffe
 
  - Weitere Tools (Links)
    - Logging
