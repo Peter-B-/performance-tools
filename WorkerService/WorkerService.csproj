@@ -7,7 +7,7 @@
     <UserSecretsId>dotnet-WorkerService-402afe75-3de9-413d-bfc5-a36026c031c9</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
 
-    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
   </PropertyGroup>
 
   <ItemGroup>

@@ -13,7 +13,7 @@ public class Worker : BackgroundService
     {
         this.logger = logger;
         this.httpClientFactory = httpClientFactory;
-        
+
         this.client = httpClientFactory.CreateClient();
 
     }
@@ -24,7 +24,7 @@ public class Worker : BackgroundService
         {
             try
             {
-                await ReadDataFromApi(token);
+                await ReadIntoNewArray(token);
             }
             catch (TaskCanceledException)
             {
@@ -38,21 +38,28 @@ public class Worker : BackgroundService
         }
     }
 
-    private async Task ReadDataFromApi(CancellationToken token)
+    private async Task ReadIntoNewArray(CancellationToken token)
     {
+        var data = await client.GetByteArrayAsync("http://localhost:5065/Binary/data/1k", token);
 
-        //var data = await client.GetByteArrayAsync("http://localhost:5065/Binary/data/1k", token);
+        var ticks = BinaryPrimitives.ReadInt64BigEndian(data);
+        var dateTimeUtc = new DateTime(ticks, DateTimeKind.Utc);
+        //if (logger.IsEnabled(LogLevel.Information))
+        //    logger.LogInformation("Received {length} bytes with time {time}", data.Length, dateTimeUtc);
+    }
 
+    private async Task ReadIntoPoolArray(CancellationToken token)
+    {
         var data = ArrayPool<byte>.Shared.Rent(2 << 10);
-        
+
         try
         {
             await ReadIntoByteArray(token, client, data);
 
             var ticks = BinaryPrimitives.ReadInt64BigEndian(data);
             var dateTimeUtc = new DateTime(ticks, DateTimeKind.Utc);
-            //if (logger.IsEnabled(LogLevel.Information))
-            //    logger.LogInformation("Received {length} bytes with time {time}", data.Length, dateTimeUtc);
+            if (logger.IsEnabled(LogLevel.Information))
+                logger.LogInformation("Received {length} bytes with time {time}", data.Length, dateTimeUtc);
         }
         finally
         {
