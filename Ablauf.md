@@ -9,7 +9,6 @@
    - Einfaches Benchmark erstellen
      - Endian Shift
    - laufen lassen
-   - R-Grafiken zeigen
    - LinqPad Beispiel
      - String.Equals vs HashSet
      - Unterschied .Net 6 vs .Net 8
@@ -20,6 +19,7 @@
      - Umgebung
  - Wann soll man überhaupt optimieren?
    - > "root of all evil"
+     > In DonaldKnuth's paper "StructuredProgrammingWithGoToStatements", he wrote: "Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."
    - > "We value maintainable code over premature optimization."
 
  - `dotnet counters`
@@ -49,7 +49,8 @@
    - [clumsy](https://github.com/jagt/clumsy)
      
  - Nette Links (?)
-   - [ASP.NET Core Diagnostic Scenarios](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios)
+   - David Fowler [ASP.NET Core Diagnostic Scenarios](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios)
+   - Stephen Toub [Performance improvements in .Net 8](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
 
 
 
