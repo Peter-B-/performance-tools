@@ -24,7 +24,7 @@ public class Worker : BackgroundService
         {
             try
             {
-                await ReadIntoNewArray(token);
+                await ReadIntoPoolArray(token);
             }
             catch (TaskCanceledException)
             {
@@ -50,7 +50,8 @@ public class Worker : BackgroundService
 
     private async Task ReadIntoPoolArray(CancellationToken token)
     {
-        var data = ArrayPool<byte>.Shared.Rent(2 << 10);
+        //var data = ArrayPool<byte>.Shared.Rent(1 << 10);
+        var data = new byte[1 << 10];
 
         try
         {
@@ -63,7 +64,7 @@ public class Worker : BackgroundService
         }
         finally
         {
-            ArrayPool<byte>.Shared.Return(data);
+            //ArrayPool<byte>.Shared.Return(data);
         }
     }
 
