@@ -9,7 +9,7 @@ namespace WebApplication.Controllers;
 public class BinaryController : ControllerBase
 {
     [HttpGet("data/1k")]
-    public IActionResult GetData1k()
+    public IActionResult GetData1K()
     {
         var data = new byte[1 << 10];
         Random.Shared.NextBytes(data);

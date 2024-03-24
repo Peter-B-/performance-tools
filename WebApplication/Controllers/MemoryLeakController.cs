@@ -1,4 +1,5 @@
 using System.Collections.Concurrent;
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication.Controllers;
@@ -6,19 +7,32 @@ namespace WebApplication.Controllers;
 [ApiController]
 public class MemoryLeakController(ILogger<MemoryLeakController> logger) : ControllerBase
 {
-    private static readonly ConcurrentDictionary<string, byte[]> _cache = new ConcurrentDictionary<string, byte[]>();
+    private static readonly ConcurrentDictionary<string, byte[]> cache = new();
 
-    [HttpGet("/leak")]
-    public string Leak1()
+    /// <summary>
+    ///     Allocates a 16 kiB byte array
+    /// </summary>
+    [HttpGet("/alloc")]
+    public string Allocation()
     {
-        for (var i = 0; i < 10; i++)
-        {
-            var id = Random.Shared.Next(0, 100000).ToString();
+        var array = new byte[1 << 14];
 
-            _cache.GetOrAdd(id, _ => new byte[1 << 14]);
-        }
+        Encoding.UTF8.GetBytes("abc", array);
 
-        logger.LogInformation("Storing {Count} items", _cache.Count);
+        return Encoding.UTF8.GetString(array.AsSpan(0, 3));
+    }
+
+    /// <summary>
+    ///     Stores 16 kiB in static cache dictionary.
+    /// </summary>
+    [HttpGet("/leak")]
+    public string Leak()
+    {
+        var id = Random.Shared.Next(0, 100000).ToString();
+
+        cache.GetOrAdd(id, _ => new byte[1 << 14]);
+
+        logger.LogInformation("Storing {Count} items", cache.Count);
 
         return "abc";
     }

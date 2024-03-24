@@ -4,11 +4,11 @@ namespace WebApplication.Services;
 
 class UserService : IUserService
 {
-    private readonly IReadOnlyList<User> _users = GenerateUsers(10000);
+    private readonly IReadOnlyList<User> users = GenerateUsers(10000);
 
-    public async Task<string> GetRandomUserName() => _users[Random.Shared.Next(_users.Count)].UserName;
+    public async Task<string> GetRandomUserName() => users[Random.Shared.Next(users.Count)].UserName;
 
-    public async Task<IReadOnlyList<User>> GetUsers() => _users;
+    public async Task<IReadOnlyList<User>> GetUsers() => users;
 
     private static IReadOnlyList<User> GenerateUsers(int numberOfUsers) =>
         Enumerable.Range(1, numberOfUsers)
