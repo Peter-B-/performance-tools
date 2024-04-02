@@ -23,6 +23,7 @@ public class Program
             c.RoutePrefix = "";
             c.SwaggerEndpoint("../swagger/v1/swagger.json", "My API V1");
             c.EnableTryItOutByDefault();
+            c.DisplayRequestDuration();
         });
 
         app.UseAuthorization();
