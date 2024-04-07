@@ -1,5 +1,4 @@
 using System.Buffers.Binary;
-using System.Globalization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication.Controllers;
@@ -19,10 +18,11 @@ public class BinaryController : ControllerBase
     }
 
     [HttpGet("bigEndian/tick")]
-    public IActionResult GetUtcTick()
+    public async Task<IActionResult> GetUtcTick()
     {
         var data = new byte[8];
         BinaryPrimitives.WriteInt64BigEndian(data, DateTime.UtcNow.Ticks);
+        await Task.Delay(500);
         return File(data, "application/octet-stream");
     }
 }
