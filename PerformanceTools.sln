@@ -5,9 +5,16 @@ VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark", "Benchmark\Benchmark.csproj", "{6FBF964B-7655-464F-AF7F-D01A7259782C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerService", "WorkerService\WorkerService.csproj", "{BE5D9DE4-9378-43AF-AFD3-756B32072501}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService", "WorkerService\WorkerService.csproj", "{BE5D9DE4-9378-43AF-AFD3-756B32072501}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{1CE8BE62-6985-45F4-98C6-9BC0FC40FEF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{1CE8BE62-6985-45F4-98C6-9BC0FC40FEF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{1F1B662A-C2BA-42AA-A8CD-1439F973FB0F}"
+	ProjectSection(SolutionItems) = preProject
+		Ablauf.md = Ablauf.md
+		Notizen.md = Notizen.md
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
