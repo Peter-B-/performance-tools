@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark", "Benchmark\Benchmark.csproj", "{6FBF964B-7655-464F-AF7F-D01A7259782C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark.Template", "Benchmark.Template\Benchmark.Template.csproj", "{6FBF964B-7655-464F-AF7F-D01A7259782C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService", "WorkerService\WorkerService.csproj", "{BE5D9DE4-9378-43AF-AFD3-756B32072501}"
 EndProject
