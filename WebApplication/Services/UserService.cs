@@ -4,10 +4,9 @@ namespace WebApplication.Services;
 
 internal class UserService : IUserService
 {
-    private static readonly string UserFilePath = Path.Combine(
-        Path.GetDirectoryName(Environment.ProcessPath)!, 
-        "data", "users.csv");
-    private static readonly int NoOfUsers = 20000;
+    private static readonly string UserFilePath = 
+        Path.Combine(@"c:\temp\Vortrag\", "data", $"users {DateTime.Now:HHmmss}.csv");
+    private static readonly int NoOfUsers = 5000;
 
     public async Task<string> GetRandomUserName() => 
         GetUserName(Random.Shared.Next(NoOfUsers) + 1);
@@ -18,7 +17,7 @@ internal class UserService : IUserService
             await CreateUserFile();
 
         var users = new List<User>(NoOfUsers);
-        foreach (var line in await File.ReadAllLinesAsync(UserFilePath))
+        await foreach (var line in File.ReadLinesAsync(UserFilePath))
         {
             var parts = line.Split(",");
             users.Add(new User(parts[0], parts[1], parts[2], parts[3], parts[4], parts[5]));
