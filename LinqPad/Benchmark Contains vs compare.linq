@@ -1,5 +1,5 @@
 <Query Kind="Program">
-  <RuntimeVersion>8.0</RuntimeVersion>
+  <RuntimeVersion>6.0</RuntimeVersion>
 </Query>
 
 void Main()
@@ -18,6 +18,7 @@ bool IsInEquals(string test) =>
 		test.Equals("PartRecognizedMessageV2", StringComparison.Ordinal);
 
 bool IsInHashset(string test) => hashSet.Contains(test);
+
 private static readonly HashSet<string> hashSet = new(StringComparer.Ordinal)
 	{
 		"EnvironmentParameterMessage",
