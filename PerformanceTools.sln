@@ -5,8 +5,6 @@ VisualStudioVersion = 17.10.34607.79
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Benchmark.Template", "Benchmark.Template\Benchmark.Template.csproj", "{6FBF964B-7655-464F-AF7F-D01A7259782C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerService", "WorkerService\WorkerService.csproj", "{BE5D9DE4-9378-43AF-AFD3-756B32072501}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApplication", "WebApplication\WebApplication.csproj", "{1CE8BE62-6985-45F4-98C6-9BC0FC40FEF4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{1F1B662A-C2BA-42AA-A8CD-1439F973FB0F}"
@@ -26,10 +24,6 @@ Global
 		{6FBF964B-7655-464F-AF7F-D01A7259782C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FBF964B-7655-464F-AF7F-D01A7259782C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FBF964B-7655-464F-AF7F-D01A7259782C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BE5D9DE4-9378-43AF-AFD3-756B32072501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BE5D9DE4-9378-43AF-AFD3-756B32072501}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BE5D9DE4-9378-43AF-AFD3-756B32072501}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BE5D9DE4-9378-43AF-AFD3-756B32072501}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1CE8BE62-6985-45F4-98C6-9BC0FC40FEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1CE8BE62-6985-45F4-98C6-9BC0FC40FEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1CE8BE62-6985-45F4-98C6-9BC0FC40FEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
