@@ -37,10 +37,10 @@
    - Download zeigen
    - auch möglich in Docker
 
- - `dotnet dump`
+ - VS Performance Profiler
+   - Beispiel mit Async, Counters und FileAccess
  
- - `dotTrace`
-   - sync over async Problem 
+ - 
 
  - `ProcMon`
    - Dateizugriffe
