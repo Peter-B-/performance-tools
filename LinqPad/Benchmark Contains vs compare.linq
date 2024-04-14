@@ -1,5 +1,5 @@
 <Query Kind="Program">
-  <RuntimeVersion>6.0</RuntimeVersion>
+  <RuntimeVersion>8.0</RuntimeVersion>
 </Query>
 
 void Main()

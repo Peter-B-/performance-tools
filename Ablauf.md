@@ -1,30 +1,48 @@
-﻿# Vortag Ablauf 
+﻿# Vorbereitung
 
- - Einleitung
-   - Vorstellung
-   - Große Anzahl an Tools
+ - Aufmachen
+   - Docker
+   - LinqPad
+   - VS Preview
+
+# Generell
+ - Warum hab ich die Tools ausgewählt?
+ - 
+
+# Vortag Ablauf 
+
+ - Vorstellung
+ - Werkzeuge
+   - Werde eine Reihe Werkzeuge vorstellen
+   - Nicht im Detail - keiner wird Profi
+   - Ziel: „Da gibt es doch das eine Tool, das könnte mir hier helfen“
+   - Achtung: Ich hüpfe zwischen den Tools
+
  
  - Erstes Tool: `Benchmark.Net`
-   - Projekt anlegen
    - Einfaches Benchmark erstellen
      - Endian Shift
    - laufen lassen
      - Was macht BenchmarkDotNet?
        - Baut App in jeweiligem Target Framework
+       - Stellt Windows auf High-Performance
        - Warmup
        - Misst Overhead
        - Führt Benchmark durch
        - Analysiert Outlier
        - Erstellt Reports
+   
    - LinqPad Beispiel
      - String.Equals vs HashSet
      - Unterschied .Net 6 vs .Net 8
+     - Equals vergleicht länge
 
  - --> Was sind gute Benchmarks 
    - Wichtig
      - Szenario
      - Umgebung
- - Wann soll man überhaupt optimieren?
+
+ - Wenn das so ein Aufwand ist, soll man überhaupt optimieren?
    - > "root of all evil"
    - Was heißt das für uns?
    - Sollen wir möglichst schlechten Code schreiben?
@@ -34,8 +52,12 @@
  - `dotnet counters`
    - Server Starten
    - Counter anschauen
-   - Download zeigen
-   - auch möglich in Docker
+   - CLI Tool zeigen
+     - Download zeigen
+   - auch möglich in Docker oder auf Prod Server. Braucht nur .Net Runtime.
+   - Folien: 
+     - Cool mit Grafana / Application Insights
+     - Cool mit .Net Aspire
 
  - VS Performance Profiler
    - Beispiel mit Async, Counters und FileAccess
@@ -65,6 +87,8 @@
    - Stephen Toub [Performance improvements in .Net 8](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
 
 
+# Todo
 
+ - GitHub-Seite fertig machen
 
 
