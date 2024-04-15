@@ -4,6 +4,7 @@
    - Docker
    - LinqPad
    - VS Preview
+   - Powershell
 
 # Generell
  - Warum hab ich die Tools ausgewählt?
