@@ -12,14 +12,12 @@ public class MemoryLeakController(ILogger<MemoryLeakController> logger) : Contro
     /// <summary>
     ///     Allocates a 16 kiB byte array
     /// </summary>
-    [HttpGet("/alloc")]
+    [HttpGet("/allocate")]
     public string Allocation()
     {
-        var array = new byte[1 << 14];
+        var text = new string('A', 1 << 14);
 
-        Encoding.UTF8.GetBytes("abc", array);
-
-        return Encoding.UTF8.GetString(array.AsSpan(0, 3));
+        return text[..3];
     }
 
     /// <summary>

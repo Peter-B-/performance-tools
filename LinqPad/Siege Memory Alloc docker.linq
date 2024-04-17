@@ -18,8 +18,8 @@ while(DateTime.Now - start < TimeSpan.FromSeconds(45))
 	var diff = DateTime.Now - start;
 	
 	var url = diff switch{
-		var d when d < TimeSpan.FromSeconds(15) => "/alloc",
-		var d when d < TimeSpan.FromSeconds(25) => Random.Shared.NextDouble()<0.5? "/leak":"/alloc",
+		var d when d < TimeSpan.FromSeconds(15) => "/allocate",
+		var d when d < TimeSpan.FromSeconds(25) => Random.Shared.NextDouble()<0.5? "/leak":"/allocate",
 		_ => "/leak"
 	};
 

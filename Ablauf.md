@@ -2,6 +2,7 @@
 
  - Aufmachen
    - Docker
+     - Container Löschen
    - LinqPad
    - VS Preview
    - Powershell
