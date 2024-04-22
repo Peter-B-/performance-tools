@@ -1,27 +1,33 @@
 ﻿# Vorbereitung
 
+ - LinqPad leeren
  - Aufmachen
    - Docker
      - Container Löschen
    - LinqPad
    - VS Preview
    - Powershell
+   - Open
 
-# Generell
- - Warum hab ich die Tools ausgewählt?
- - 
 
 # Vortag Ablauf 
 
- - Vorstellung
  - Werkzeuge
    - Werde eine Reihe Werkzeuge vorstellen
+     - Wo ist die Applikation langsam?
+     - Warum?
    - Nicht im Detail - keiner wird Profi
    - Ziel: „Da gibt es doch das eine Tool, das könnte mir hier helfen“
    - Achtung: Ich hüpfe zwischen den Tools
 
+- Vorstellung
+  - Interesse: technische Details 
+    - Threads, Tasks, RX, EF, Garbage Collection, ...
+    - APIs, Datenbanken, Services
  
  - Erstes Tool: `Benchmark.Net`
+   - Das Tool für .Net Microbenchmarks
+     - Isolierte Untersuchung von einzelnen Methoden oder Algorithmen
    - Einfaches Benchmark erstellen
      - Endian Shift
    - laufen lassen
@@ -35,6 +41,7 @@
        - Erstellt Reports
    
    - LinqPad Beispiel
+     - LinqPad und Dump()   
      - String.Equals vs HashSet
      - Unterschied .Net 6 vs .Net 8
      - Equals vergleicht länge
@@ -44,7 +51,7 @@
      - Szenario
      - Umgebung
 
- - Wenn das so ein Aufwand ist, soll man überhaupt optimieren?
+ - --> Wenn das so ein Aufwand ist, soll man überhaupt optimieren?
    - > "root of all evil"
    - Was heißt das für uns?
    - Sollen wir möglichst schlechten Code schreiben?

@@ -10,7 +10,7 @@ public class MemoryLeakController(ILogger<MemoryLeakController> logger) : Contro
     private static readonly ConcurrentDictionary<string, byte[]> cache = new();
 
     /// <summary>
-    ///     Allocates a 16 kiB byte array
+    ///     Allocates a 16 kiB string
     /// </summary>
     [HttpGet("/allocate")]
     public string Allocation()
@@ -29,8 +29,6 @@ public class MemoryLeakController(ILogger<MemoryLeakController> logger) : Contro
         var id = Random.Shared.Next(0, 100000).ToString();
 
         cache.GetOrAdd(id, _ => new byte[1 << 14]);
-
-        logger.LogInformation("Storing {Count} items", cache.Count);
 
         return "abc";
     }
