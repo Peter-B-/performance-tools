@@ -70,34 +70,20 @@
 
  - VS Performance Profiler
    - Beispiel mit Async, Counters und FileAccess
+   - Tools im Detail anschauen, wenn ihr ein konkretes Problem habt
+   - --> Viele Tools, hauptsächlich zur Analyse auf Entwicklermaschine
  
- - 
-
+ - Aber was, wenn das Problem nur beim Kunden auftritt?
+ - `DotMemory`
+ - Starten API im Docker und nehmen Memory Snapshots auf
+ 
  - `ProcMon`
    - Dateizugriffe
 
  - Weitere Tools (Links)
    - Logging
-   - APM Tools
-     - OpenTelemetry
-     - Prometheus
-     - Application Insights
-   - Jetbrains tool suite
-     - dotTrace
-     - dotMemory
    - PerfView: Matrix
    - SysInternals
      - ProcMon
    - [siege](https://www.joedog.org/siege-home/)
    - [clumsy](https://github.com/jagt/clumsy)
-     
- - Nette Links (?)
-   - David Fowler [ASP.NET Core Diagnostic Scenarios](https://github.com/davidfowl/AspNetCoreDiagnosticScenarios)
-   - Stephen Toub [Performance improvements in .Net 8](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/)
-
-
-# Todo
-
- - GitHub-Seite fertig machen
-
-

@@ -8,7 +8,7 @@ using var client = new HttpClient(handler);
 
 
 var tasks =
-	Enumerable.Range(0, 1000)
+	Enumerable.Range(0, 200)
 		.Select(_ => client.GetAsync("http://localhost:5001/users/random"))
 		.ToList();
 
