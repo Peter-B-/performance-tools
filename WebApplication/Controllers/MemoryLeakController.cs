@@ -13,7 +13,7 @@ public class MemoryLeakController(ILogger<MemoryLeakController> logger) : Contro
     ///     Allocates a 16 kiB string
     /// </summary>
     [HttpGet("/allocate")]
-    public string Allocation()
+    public async Task<string> Allocation()
     {
         var text = new string('A', 1 << 14);
 
@@ -24,7 +24,7 @@ public class MemoryLeakController(ILogger<MemoryLeakController> logger) : Contro
     ///     Stores 16 kiB in static cache dictionary.
     /// </summary>
     [HttpGet("/leak")]
-    public string Leak()
+    public async Task<string> Leak()
     {
         var id = Random.Shared.Next(0, 100000).ToString();
 
